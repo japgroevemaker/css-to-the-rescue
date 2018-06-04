@@ -5,16 +5,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
 
-    <title>Living Styleguide</title>
-
-    <link rel="stylesheet" href="styles.css">
+    <title>Elvis & you - All you need to know about the King</title>
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Source+Sans+Pro:400,400i,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
 
 </head>
 <body>
+<!-- navigation -->
+<header>
+  <a href="styleguide.html"><h1>Elvis <span>&amp</span> you</h1></a>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle"><span>&#9776;</span></label>
+  <nav>
+      <ul>
+          <li><a href="#main-content" aria-label="Home, current page">Home</a></li>
+          <li>
+              <a href="/products">Products</a>
 
-<h1>Living Styleguide</h1>
+              <ul>
+                  <li><a href="/products/rock">Rock</a></li>
+                  <li><a href="/products/paper">Paper</a></li>
+                  <li><a href="/products/scissors">Scissors</a></li>
+              </ul>
 
+          </li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+      </ul>
+  </nav>
+
+</header>
+
+<!-- <h1>News</h1> -->
+<section>
+  <a href="media-item.html" id="content">
+    <article>
+      <h1>Today in 1974</h1>
+      <img src="image/tahoe.jpg" alt="Elvis in Lake Tahoe">
+      <h2>Elvis strikes</h2>
+      <h2>again at</h2>
+      <h2>Lake Tahoe</h2>
+    </article>
+  </a>
+
+<a href="media-item.html">
+  <article>
+    <h1>Las Vegas 1970</h1>
+    <img src="image/elvisP1.jpg" alt="Elvis in Lake Tahoe">
+    <h2>An perfect</h2>
+    <h2>Las Vegas</h2>
+    <h2>summer season</h2>
+  </article>
+</a>
+
+<a href="media-item.html">
+  <article>
+    <h1>1956</h1>
+    <img src="image/elvisPBanner.jpg" alt="Elvis in Lake Tahoe">
+    <h2>Back in</h2>
+    <h2>the early</h2>
+    <h2>rockin' days</h2>
+  </article>
+</a>
+
+<a href="media-item.html">
+  <article>
+    <h1>New York 1972</h1>
+    <img src="image/elvisP2.jpg" alt="Elvis in Lake Tahoe">
+    <h2>The return</h2>
+    <h2>to the garden</h2>
+    <!-- <h2>Lake Tahoe</h2> -->
+  </article>
+</a>
+
+<a href="components/media-item.html">
+  <article>
+    <h1>Jumpsuits</h1>
+    <img src="image/elvisP3.jpg" alt="Elvis in Lake Tahoe">
+    <h2>The</h2>
+    <h2>jumpsuits</h2>
+  </article>
+</a>
+
+<a href="components/media-item.html">
+  <article>
+    <h1>1970 - 1977</h1>
+    <img src="image/elvisP4.jpg" alt="Elvis in Lake Tahoe">
+    <h2>The long</h2>
+    <h2>and intens</h2>
+    <h2>touring years</h2>
+  </article>
+</a>
+</section>
 <!-- place components or patterns here -->
+
+<footer>
+  <input type="checkbox" id="Chat">
+  <label for="Chat"><img src="image/chat.svg" alt="chat"/></label>
+
+  <div></div>
+
+  <aside>
+
+      <ol>
+          <li>
+
+              <p>
+                  Hey!
+              </p>
+
+              <footer>
+                  <p>Posted on <time datatime="2015-01-22T10:25">10:25 AM</time> by you</p>
+                  <p data-status="READ">Has been read</p>
+              </footer>
+
+          </li>
+          <li>
+
+              <p>
+                  Hey! Sorry I was busy
+              </p>
+
+              <footer>
+                  <p>Posted on <time datatime="2017-02-03T14:19">2:19 PM</time> by John</p>
+              </footer>
+
+          </li>
+          <li>
+
+              <p>
+                  I sent that 2 years ago
+              </p>
+
+              <footer>
+                  <p>Posted on <time datatime="2017-02-03T14:22">2:22 PM</time> by you</p>
+                  <p data-status="DELIVERED">Has been delivered</p>
+              </footer>
+
+          </li>
+      </ol>
+
+      <form action="/" method="post">
+
+          <label for="field-message">Message</label>
+          <textarea name="field-message" id="field-message"></textarea>
+
+          <button type="submit">Send</button>
+
+      </form>
+
+  </aside>
+</footer>
+
 
 </body>
 </html>
