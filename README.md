@@ -84,7 +84,7 @@ Omdat ik een groot fan ben van Elvis Presley, wilde ik graag een website maken d
 
 - [x] Custom checkbox
   - Een opdracht was het maken van een custom checkbox. De ```input type="checkbox"``` moet je als eerst een ```opacity: 0;``` geven. Daarna kan je het ```label``` element gaan stijlen en er een eigen checkbox van maken.
-  ```css
+    ```css
       input[type="checkbox"]:checked+label::before {
           transform: scale(1.01, 1.01);
           content: '✔';
@@ -98,13 +98,13 @@ Omdat ik een groot fan ben van Elvis Presley, wilde ik graag een website maken d
           -webkit-animation: rubberBand 0.65s;
           animation: rubberBand 0.65s;
         }
-        ```
+      ```
 
 
-    - [x] Validatie van het formulier
-     - Een vereiste was ook dat ik het formulier zou stijlen en de gebruiker feedback zou geven over hun geleverde input. Dit heb ik gedaan doormiddel van ```input:valid``` en ```input:invalid```. Op deze manier kan je de gebruiker makkelijk feedback geven over het geen wat hij/zij nog moet verichten om het formulier compleet te maken.
+- [x] Validatie van het formulier
+  - Een vereiste was ook dat ik het formulier zou stijlen en de gebruiker feedback zou geven over hun geleverde input. Dit heb ik gedaan doormiddel van ```input:valid``` en ```input:invalid```. Op deze manier kan je de gebruiker makkelijk feedback geven over het geen wat hij/zij nog moet verichten om het formulier compleet te maken.
 
 
-    ## Bronnen
-    - Rating example makes use of Emoji from: http://emojione.com
-    - Stijlen van het ```<progress>``` https://www.hongkiat.com/blog/html5-progress-bar/
+## Bronnen
+  - Rating example makes use of Emoji from: http://emojione.com
+  - Stijlen van het ```<progress>``` https://www.hongkiat.com/blog/html5-progress-bar/
