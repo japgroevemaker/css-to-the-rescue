@@ -1,7 +1,7 @@
 # CSS-TO-THE-RESCUE
 Omdat ik een groot fan ben van Elvis Presley, wilde ik graag een website maken die in het teken van Elvis staat. Het moest een pleasureable website worden, waar ook makkelijk doorheen te tabben was.
 
-(https://japgroevemaker.github.io/css-to-the-rescue/styleguide.html)[Live demo]
+[Live demo](https://japgroevemaker.github.io/css-to-the-rescue/styleguide.html)
 
 ## Eisen
 - [x] Geen classes gebruiken
