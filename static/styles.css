@@ -130,13 +130,12 @@ section {
   grid-template-columns: 90%;
   justify-content: center;
   width: 90%;
-  grid-gap: 1em;
+  grid-gap: 3em;
 }
 
 section>a>article {
   width: fit-content;
   height: fit-content;
-  margin: 1.5em auto;
   background-color: #fff;
   border: var(--border);
   box-shadow: var(--shadow)
@@ -505,7 +504,7 @@ aside form label {
 
 aside form textarea {
   border: solid 0.1em #f2f2f2;
-  height: 2em;
+  height: 5em;
   width: 90%;
   margin: auto;
   border-radius: 0.5em;
@@ -726,10 +725,10 @@ nav ol li a:nth-of-type(1) {
     grid-template-columns: repeat(2, 1fr);;
   }
 
-  section > a > article {
+  /* section > a > article {
     height: fit-content;
     width: fit-content;
-  }
+  } */
 
   footer input:checked~aside {
     top: 35%;
@@ -848,10 +847,9 @@ header nav ul {
   }
 
   section {
-    margin: 3em auto;
     width: 80%;
     justify-content: center;
-    grid-gap: 2em;
+    grid-gap: 3em;
     grid-template-columns: repeat(3, 1fr);
   }
 

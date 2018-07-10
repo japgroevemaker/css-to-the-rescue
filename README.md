@@ -107,4 +107,6 @@ Omdat ik een groot fan ben van Elvis Presley, wilde ik graag een website maken d
 
 ## Bronnen
   - Rating example makes use of Emoji from: http://emojione.com
-  - Stijlen van het ```<progress>``` https://www.hongkiat.com/blog/html5-progress-bar/
+  - [Stijlen van het ```<progress>```](https://www.hongkiat.com/blog/html5-progress-bar/)
+  - [leesbaarheid online](https://baymard.com/blog/line-length-readability)
+  - [Video over CSS grid](https://www.youtube.com/watch?v=HgwCeNVPlo0)
