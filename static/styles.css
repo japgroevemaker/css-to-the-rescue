@@ -242,6 +242,13 @@ article>figure>figcaption>div {
   margin-right: auto;
   padding: 2em;
   width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article>figure>figcaption>div>time {
+  font-family: var(--font-type);
 }
 
 article>div {
