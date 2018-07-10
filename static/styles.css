@@ -48,7 +48,13 @@ h1 {
 }
 
 section {
-  margin-top: 5em;
+  display: grid;
+  grid-template-columns: 90%;
+  margin: 4em auto;
+}
+
+section a {
+  margin-top: 0.5em;
 }
 
 section h1 {
@@ -62,6 +68,12 @@ header a h1 {
   color: #000;
   margin: 0.3em auto;
   font-family: var(--font-second);
+}
+
+header a:focus,
+header a:hover {
+  transform: scale(1.10, 1.10);
+  transition: all 0.2s;
 }
 
 li a:nth-of-type(5) {
@@ -79,7 +91,7 @@ header nav ul {
   position: fixed;
   height: 100%;
   width: 100%;
-  right: -30em;
+  right: -100%;
   bottom: 0;
   top: 2em;
   list-style-type: none;
@@ -101,6 +113,7 @@ a {
   font-size: 1.2em;
   color: var(--link-color);
   text-decoration: none;
+  outline: none;
 }
 
 header nav ul ul {
@@ -112,9 +125,17 @@ h1 span {
   font-style: italic;
 }
 
-section>a>article {
+section {
+  display: grid;
+  grid-template-columns: 90%;
+  justify-content: center;
   width: 90%;
-  height: 28em;
+  grid-gap: 1em;
+}
+
+section>a>article {
+  width: fit-content;
+  height: fit-content;
   margin: 1.5em auto;
   background-color: #fff;
   border: var(--border);
@@ -132,11 +153,7 @@ section>a>article>h2 {
   color: #fff;
   padding: 0.3em;
   font-style: italic;
-  position: relative;
-  left: 0;
-  right: 0;
-  top: -3.5em;
-  font-size: 2em;
+  font-size: 1.5em;
   box-shadow: var(--shadow);
   font-family: var(--font-type)
 }
@@ -188,6 +205,12 @@ footer>label {
   margin: 1em auto;
   box-shadow: 0px 1px 1px #888;
   z-index: 100;
+}
+
+footer>label:hover,
+footer>label:focus {
+  transform: scale(1.10, 1.10);
+  transition: all 0.2s;
 }
 
 label img {
@@ -249,6 +272,13 @@ article>div>p:nth-of-type(1) {
   padding-bottom: 1em;
 }
 
+article>div>p:nth-of-type(2) {
+  font-size: 1.2em;
+  line-height: 1.6em;
+  border-bottom: var(--border);
+  padding-bottom: 1em;
+}
+
 div fieldset {
   border: 0;
 }
@@ -261,7 +291,13 @@ fieldset legend {
   z-index: 100;
 }
 
-fieldset>input {
+fieldset div {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+fieldset>div>input {
   opacity: 0;
 }
 
@@ -684,8 +720,15 @@ nav ol li a:nth-of-type(1) {
     justify-content: space-evenly;
   }
 
+  section {
+    width: 80%;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);;
+  }
+
   section > a > article {
-    height: auto;
+    height: fit-content;
+    width: fit-content;
   }
 
   footer input:checked~aside {
@@ -700,21 +743,32 @@ nav ol li a:nth-of-type(1) {
     padding: 0;
   }
 
-  aside {
-    width: 70vw;
-    height: 80vh;
-  }
-
   h1 {
     margin-top: 20vh;
   }
 }
 
-@media(min-width: 48em) {
+@media(min-width: 50em) {
 header nav ul {
   flex-direction: column;
   justify-content: unset;
-} 
+  }
+
+  /* media-item */
+  figure {
+    width: 80%;
+    margin: auto;
+  }
+
+  article>div {
+    width: 70%;
+  }
+}
+
+@media (min-width: 55em) {
+  article>div {
+    width: 60%;
+  }
 }
 
 @media(min-width: 60em) {
@@ -742,13 +796,18 @@ header nav ul {
     justify-content: inherit;
     width: 8em;
     height: 6em;
-    right: 32em;
+    right: 31em;
     top: -10em;
     transition: top 0.2s;
     border-left: var(--border);
     border-bottom: var(--border);
     border-right: var(--border);
     box-shadow: 0px 2px 1px 0px rgba(117, 117, 117, 0.29);
+  }
+
+  header nav>ul>li>ul:focus-within {
+    top: 2.47em;
+    outline: none;
   }
 
   header nav ul li a:hover {
@@ -759,6 +818,7 @@ header nav ul {
   header nav ul li a:focus {
     font-size: 1.5em;
     transition: all 0.2s;
+    outline: none;
   }
 
   header ul>li>a:hover ~ ul {
@@ -766,9 +826,10 @@ header nav ul {
     transition: top 0.2s;
   }
 
-  header ul>li>a:focus ~ ul {
+  header ul>li>a:focus-within ~ ul {
     top: 2.47em;
     transition: top 0.2s;
+    outline: none;
   }
 
   ul>li>a:hover {
@@ -785,16 +846,13 @@ header nav ul {
     justify-content: space-around;
     background-color: unset;
   }
+
   section {
     margin: 3em auto;
     width: 80%;
     justify-content: center;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-  }
-
-  section > a > article {
-    height: 55vh;
+    grid-gap: 2em;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   section>a>article>h2 {
@@ -803,11 +861,29 @@ header nav ul {
 
   section a {
     transition: all cubic-bezier(0.5, 2.44, 0.6, 1.06) .25s;
+    outline: none;
+  }
+
+  section > a > article:hover {
+    transform: scale(1.10, 1.10);
+    transition: all 0.2s;
+  }
+
+  section > a:focus > article {
+    transform: scale(1.10, 1.10);
+    transition: all 0.2s;
+    outline-style: none;
+  }
+
+  /* chat */
+  aside {
+    width: 45vw;
+    height: 50vh;
   }
 
   /* media-item */
   figure {
-    width: 70%;
+    width: 50%;
     margin: auto;
   }
   article>div {
@@ -827,25 +903,18 @@ header nav ul {
   }
 }
 
-@media (min-width: 75em) {
-
-  section > a > article {
-    height: 28em;
+@media (min-width: 65em){
+  article>div {
+    width: 45%;
   }
 
   aside {
-    width: 20vw;
-    height: 50vh;
+    width: 25vw;
   }
+}
 
-  footer > label:hover {
-    transform: scale(1.10, 1.10);
-    transition: all 0.2s;
+@media (min-width: 70em) {
+  article>div {
+    width: 40%;
   }
-
-  footer > label:active {
-    transform: scale(1.10, 1.10);
-    transition: all 0.2s;
-  }
-
 }
